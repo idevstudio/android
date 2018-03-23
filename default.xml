@@ -2,8 +2,11 @@
 <manifest>
 
   <remote  name="github"
-           fetch=".."
+           fetch="https://github.com/"
            review="review.lineageos.org" />
+  
+  <remote name="own_libra"
+          fatch="." />
 
   <remote  name="private"
            fetch="ssh://git@github.com" />
