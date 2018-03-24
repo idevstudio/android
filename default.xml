@@ -25,7 +25,7 @@
   <project path="own_device" name="android_device_xiaomi_libra" groups="pdk" remote="own_libra" />
 
   <!-- AOSP Projects -->
-  <!--
+
   <project path="build/make" name="LineageOS/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -582,7 +582,7 @@
 
   <include name="snippets/lineage.xml" />
 
-  -->
+
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
