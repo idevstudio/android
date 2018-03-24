@@ -21,8 +21,11 @@
            sync-c="true"
            sync-j="4" />
 
-  <!-- AOSP Projects -->
+  <!-- Own Projects -->
+  <project path="own_device" name="android_device_xiaomi_libra" groups="pdk" remote="own_libra" />
 
+  <!-- AOSP Projects -->
+  <!--
   <project path="build/make" name="LineageOS/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -578,6 +581,8 @@
   <project path="tools/tradefederation/core" name="platform/tools/tradefederation" groups="pdk,tradefed" remote="aosp" />
 
   <include name="snippets/lineage.xml" />
+
+  -->
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
