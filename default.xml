@@ -22,8 +22,6 @@
            sync-j="4" />
 
   <!-- Own Projects -->
-  <project path="own_device" name="android_device_xiaomi_libra" groups="pdk" remote="own_libra" />
-  <project path="bionic" name="LineageOS/android_bionic" groups="pdk" />
 
   <!-- AOSP Projects -->
   <!--
@@ -588,5 +586,7 @@
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
   -->
+  
+  <include name="snippets/lineage.xml" />
 
 </manifest>
