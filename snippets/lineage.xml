@@ -56,11 +56,11 @@
   <project path="packages/providers/WeatherProvider" name="LineageOS/android_packages_providers_WeatherProvider" />
   <project path="prebuilts/lineage-sdk" name="LineageOS/android_prebuilts_lineage-sdk" clone-depth="1" />
   <project path="system/extras/su" name="LineageOS/android_system_extras_su" />
-  <project path="vendor/lineage" name="LineageOS/android_vendor_lineage" remote="own_libra" />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="own_libra" />
 
   <!-- CodeAurora additions -->
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" />
-  <project path="external/ant-wireless/ant_native" name="LineageOS/android_external_ant-wireless_ant_native" />
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="own_libra" />
   <project path="external/ant-wireless/ant_service" name="LineageOS/android_external_ant-wireless_ant_service" />
   <project path="external/ant-wireless/antradio-library" name="LineageOS/android_external_ant-wireless_antradio-library" />
   <project path="external/brctl" name="LineageOS/android_external_brctl" />
