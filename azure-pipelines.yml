@@ -16,7 +16,10 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    ls 
+    ls
+    curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
+    chmod +x repo
+    ls
     mkdir repohome
     cd repohome
     repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
