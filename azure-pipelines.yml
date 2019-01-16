@@ -22,7 +22,7 @@ steps:
     ls
     mkdir repohome
     cd repohome
-    repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
-    repo sync
+    ../repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
+    ../repo sync
     
   displayName: 'Run a multi-line script'
