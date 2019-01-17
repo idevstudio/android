@@ -14,16 +14,19 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    #echo Add other tasks to build, test, and deploy your project.
+    #echo See https://aka.ms/yaml
     ls
+    pwd
     curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
     chmod +x repo
     ls
+    export PATH="$(pwd):$PATH"
+    echo $PATH
     mkdir repohome
     cd repohome
-    ../repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
-    ../repo sync
+    repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
+    repo sync
     du -sk
     ls
     source build/envsetup.sh
