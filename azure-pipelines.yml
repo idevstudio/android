@@ -30,6 +30,5 @@ steps:
     du -sk
     ls
     source build/envsetup.sh
-    breakfast libra
     brunch libra
   displayName: 'Run a multi-line script'
