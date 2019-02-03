@@ -26,9 +26,12 @@ steps:
     mkdir repohome
     cd repohome
     repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
-    repo sync
+    repo sync --force-sync
     du -sk
     ls
     source build/envsetup.sh
+    breakfast libra
+    more .repo/manifest.xml
+    more .repo/local_manifests/roomservice.xml
     brunch libra
   displayName: 'Run a multi-line script'
