@@ -26,7 +26,7 @@ steps:
     mkdir repohome
     cd repohome
     repo init -u https://github.com/LineageOS/android.git -b lineage-16.0
-    repo sync --force-sync
+    repo sync --force-sync -j16
     du -sk
     ls
     source build/envsetup.sh
