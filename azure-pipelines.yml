@@ -37,4 +37,4 @@ steps:
     more .repo/local_manifests/roomservice.xml
     brunch libra
   displayName: 'Run a multi-line script'
-  timeoutInMinutes: 1
+  timeoutInMinutes: 3
