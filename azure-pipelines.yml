@@ -33,8 +33,8 @@ jobs:
         ls
         source build/envsetup.sh
         breakfast libra
-        more .repo/manifest.xml
-        more .repo/local_manifests/roomservice.xml
+        #more .repo/manifest.xml
+        #more .repo/local_manifests/roomservice.xml
         brunch libra
       displayName: 'Run a multi-line script'
       timeoutInMinutes: 350
