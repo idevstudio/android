@@ -3,38 +3,38 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
-pool:
-  vmImage: 'Ubuntu-16.04'
-
-steps:
-
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-  timeoutInMinutes: 10
-
-- script: |
-    #echo Add other tasks to build, test, and deploy your project.
-    #echo See https://aka.ms/yaml
-    ls
-    pwd
-    curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
-    chmod +x repo
-    ls
-    export PATH="$(pwd):$PATH"
-    echo $PATH
-    mkdir repohome
-    cd repohome
-    repo init -u https://github.com/idevstudio/android.git -b lineage-16.0
-    repo sync --force-sync -j16
-    du -sk
-    ls
-    source build/envsetup.sh
-    breakfast libra
-    more .repo/manifest.xml
-    more .repo/local_manifests/roomservice.xml
-    brunch libra
-  displayName: 'Run a multi-line script'
+jobs:
+- job: build
   timeoutInMinutes: 3
+  cancelTimeoutInMinutes: 2
+  pool:
+    vmImage: 'Ubuntu-16.04'
+  
+  steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
+      timeoutInMinutes: 10
+
+    - script: |
+        #echo Add other tasks to build, test, and deploy your project.
+        #echo See https://aka.ms/yaml
+        ls
+        pwd
+        curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
+        chmod +x repo
+        ls
+        export PATH="$(pwd):$PATH"
+        echo $PATH
+        mkdir repohome
+        cd repohome
+        repo init -u https://github.com/idevstudio/android.git -b lineage-16.0
+        repo sync --force-sync -j16
+        du -sk
+        ls
+        source build/envsetup.sh
+        breakfast libra
+        more .repo/manifest.xml
+        more .repo/local_manifests/roomservice.xml
+        brunch libra
+      displayName: 'Run a multi-line script'
+      timeoutInMinutes: 5
