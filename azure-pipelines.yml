@@ -5,8 +5,8 @@
 
 jobs:
 - job: build
-  timeoutInMinutes: 3
-  cancelTimeoutInMinutes: 2
+  timeoutInMinutes: 360
+  cancelTimeoutInMinutes: 10
   pool:
     vmImage: 'Ubuntu-16.04'
   
@@ -37,4 +37,4 @@ jobs:
         more .repo/local_manifests/roomservice.xml
         brunch libra
       displayName: 'Run a multi-line script'
-      timeoutInMinutes: 5
+      timeoutInMinutes: 350
