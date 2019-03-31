@@ -25,6 +25,10 @@ jobs:
         ls
         export PATH="$(pwd):$PATH"
         echo $PATH
+        git clone https://github.com/idevstudio/builttools buildtool
+        chmod +x buildtool/bc
+        export PATH="$(pwd)/buildtool:$PATH"
+        bc --version
         mkdir repohome
         cd repohome
         repo init -u https://github.com/idevstudio/android.git -b lineage-16.0
